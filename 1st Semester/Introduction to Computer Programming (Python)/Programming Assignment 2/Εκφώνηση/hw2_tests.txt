@@ -1,0 +1,112 @@
+>>> from hw2 import *
+>>> print(digit_sum(617))
+14
+>>> digit_sum(10000000001)
+2
+>>> digit_sum(digit_sum(999999999))
+9
+>>> count_digit(2018, 2)
+1
+>>> count_digit(2018, 4)
+1
+>>> count_digit(110092008762, 5) + 0
+4
+>>> round(paei_pi(1),2)
+4.0
+>>> round(paei_pi(2),5)
+2.66667
+>>> round(paei_pi(5000),6)
+3.141393
+>>> stars_horizontal(1)
+'*'
+>>> print(stars_horizontal(10))
+**********
+>>> stars_horizontal(20)
+'********************'
+>>> reverse_args(lambda x, y: x - y) (2, 3)
+1
+>>> reverse_args(lambda x, y: x / y) (1, 2)
+2.0
+>>> reverse_args(pow) (2, 10) == 100
+True
+>>> import sys,io; stdout = sys.stdout; sys.stdout = io.StringIO(); askisi6(); answer = sys.stdout.getvalue().split('\n'); sys.stdout = stdout
+>>> 'Per' in answer[0]
+True
+>>> '6.28' in answer[1]
+True
+>>> '12.56' in answer[2]
+True
+>>> 'Em' in answer[11]
+True
+>>> '1' == answer[12]
+True
+>>> '36' == answer[17]
+True
+>>> '=' in answer[20] and '3.14' in answer[20]
+True
+>>> '28.27' in answer[22][answer[22].index('3')+1:]
+True
+>>> make_quadratic(0, 0, 2019.0)(2020.0) == 2019.0
+True
+>>> make_quadratic(-2, 0, 0)(2.0) == -8.0
+True
+>>> from operator import *; abacize(add)('oooo', 'o')
+'ooooo'
+>>> abacize(sub)('oooo', 'o')
+'ooo'
+>>> abacize(pow)('oooo', 'oo')
+'oooooooooooooooo'
+>>> abacize(floordiv)('oooo', 'oo')
+'oo'
+>>> abacize(mul)('oooo', 'oo')
+'oooooooo'
+>>> abacize(mod)('ooooo', 'oo')
+'o'
+>>> round(sum_squares(1))
+1
+>>> round(sum_squares(2))
+5
+>>> round(sum_squares(10))
+385
+>>> round(sum_squares(120))
+583220
+>>> print_digits(0)
+0
+>>> print_digits(218812)
+2
+1
+8
+8
+1
+2
+>>> print_digits(12345)
+1
+2
+3
+4
+5
+>>> print_digits(99999)
+9
+9
+9
+9
+9
+>>> print_digits(100000200000050000)
+1
+0
+0
+0
+0
+0
+2
+0
+0
+0
+0
+0
+0
+5
+0
+0
+0
+0

@@ -1,0 +1,120 @@
+>>> from hw3 import *
+>>> x = location('X', 0, 1, 'test'); name(x)
+'X'
+>>> lattitude(x) == 0
+True
+>>> longitude(x) == 1
+True
+>>> type(x)
+'test'
+>>> print_location(location('X', 0.0, 1.5, 'test'))
+X (test) at coordinates 0.0, 1.5
+>>> llist = [location('A', 0,0,'t1'), location('B', 1, 0,'t1'), location('C', 3, 0, 't2')]; nearest_location(location('X', 0.1,0.1, 't1'), llist, 't1') == llist[0]
+True
+>>> nearest_location(location('X', 0.1,0.1, 't1'), llist, 't2') == llist[0]
+False
+>>> nearest_location(location('X', 0.1,0.1, 't1'), llist, 't2') == llist[2]
+True
+>>> nearest_location(location('X', 2.1,0.1, 't1'), llist, 't1') == llist[1]
+True
+>>> nearest_location(location('X', 2.1,0.1, 't1'), llist) == llist[2]
+True
+>>> import sys, io; sys.modules['hw3'].__dict__['longitude'] = lambda x: x['longitude']; sys.modules['hw3'].__dict__['lattitude'] = lambda x: x['lattitude'];sys.modules['hw3'].__dict__['name'] = lambda x: x['name'];sys.modules['hw3'].__dict__['type'] = lambda x: x['type']; abs(distance({'name':'A','lattitude':34.5, 'longitude':35.5,'type':'t'}, {'name':'B','lattitude':36.5, 'longitude':37.5,'type':'t'}) - 403.357) < 0.001
+True
+>>> abs(distance({'name':'A','lattitude':34.5, 'longitude':35.5,'type':'t'}, {'name':'B','lattitude':34.5, 'longitude':35.5,'type':'t'})) < 1e-5 
+True
+>>> stdout = sys.stdout; sys.stdout = io.StringIO();print_location({'name':'A', 'lattitude':0.5, 'longitude':1.5, 'type':'t1'}); answer = sys.stdout.getvalue()
+>>> sys.stdout = stdout
+>>> 'A' in answer and '0.5' in answer and '1.5' in answer and 't1' in answer
+True
+>>> def distance(a, b):
+...     from math import pi, cos
+...     phi_m = pi/180 * (a['lattitude'] + b['lattitude']) / 2
+...     k1 = 111.13209 - 0.56605 * cos(2*phi_m) + 0.00120 * cos(4*phi_m)
+...     k2 = 111.41513 * cos(phi_m) - 0.0945 * cos(3*phi_m) \
+...         + 0.00012*cos(5*phi_m)
+...     lat_dist = (a['lattitude'] -b['lattitude']) * k1
+...     lon_dist = (a['longitude'] - b['longitude']) * k2
+...     return abs(lon_dist) + abs(lat_dist)
+...
+>>> sys.modules['hw3'].__dict__['distance'] = distance
+>>> llist = [{'name':'A', 'lattitude':0,'longitude':0,'type':'t1'}, {'name':'B', 'lattitude':1, 'longitude':0,'type':'t1'}, {'name':'C', 'lattitude':3, 'longitude':0, 'type':'t2'}]; nearest_location({'name':'X', 'lattitude':0.1,'longitude':0.1, 'type':'t1'}, llist, 't1') == llist[0]
+True
+>>> nearest_location({'name':'X', 'lattitude':0.1,'longitude':0.1, 'type':'t1'}, llist, 't2') == llist[0]
+False
+>>> nearest_location({'name':'X', 'lattitude':0.1,'longitude':0.1, 'type':'t1'}, llist, 't2') == llist[2]
+True
+>>> nearest_location({'name':'X', 'lattitude':2.1,'longitude':0.1, 'type':'t1'}, llist, 't1') == llist[1]
+True
+>>> nearest_location({'name':'X', 'lattitude':2.1,'longitude':0.1, 'type':'t1'}, llist) == llist[2]
+True
+>>> pick_cherries_only()
+cherry1
+cherry2
+cherry3
+cherry4
+Yay!!!
+>>> pick_cherries_onebyone()
+cherry1
+cherry2
+cherry3
+cherry4
+last cherry
+>>> pick_cherries(['cherry3', None])
+cherry3
+>>> pick_cherries(['cherry3', ['cherry2', None]])
+cherry3
+cherry2
+>>> pick_cherries(['cherry3', ['cherry2', ['cherry1', None]]])
+cherry3
+cherry2
+cherry1
+>>> pick_cherries(['a', ['b', ['c', ['d', ['e', ['f', None]]]]]])
+a
+b
+c
+d
+e
+f
+>>> all_iter(lambda x: x >= 0, [1, 2, 3, 4, 5])
+True
+>>> all_iter(lambda x: x >= 0, [1, 2, 3, 4, 5, 10000, -1])
+False
+>>> all_iter(lambda x: x <= 10000, [1, 2, 3, 4, 5, 10000, -1])
+True
+>>> all_iter(lambda x: x % 2 != 0, [1, 2, 3, 5, 1, -1])
+False
+>>> all_rec(lambda x: x >= 0, [1, 2, 3, 4, 5])
+True
+>>> all_rec(lambda x: x >= 0, [1, 2, 3, 4, 5, 10000, -1])
+False
+>>> all_rec(lambda x: x <= 10000, [1, 2, 3, 4, 5, 10000, -1])
+True
+>>> all_rec(lambda x: x % 2 != 0, [1, 2, 3, 5, 1, -1])
+False
+>>> all_lc(lambda x: x >= 0, [1, 2, 3, 4, 5])
+True
+>>> all_lc(lambda x: x >= 0, [1, 2, 3, 4, 5, 10000, -1])
+False
+>>> all_lc(lambda x: x <= 10000, [1, 2, 3, 4, 5, 10000, -1])
+True
+>>> all_lc(lambda x: x % 2 != 0, [1, 2, 3, 5, 1, -1])
+False
+>>> all_hof(lambda x: x >= 0, [1, 2, 3, 4, 5])
+True
+>>> all_hof(lambda x: x >= 0, [1, 2, 3, 4, 5, 10000, -1])
+False
+>>> all_hof(lambda x: x <= 10000, [1, 2, 3, 4, 5, 10000, -1])
+True
+>>> all_hof(lambda x: x % 2 != 0, [1, 2, 3, 5, 1, -1])
+False
+>>> primes_up_to(2)
+[2]
+>>> primes_up_to(15)
+[2, 3, 5, 7, 11, 13]
+>>> primes_up_to(80)
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79]
+>>> len(primes_up_to(100))
+25
+>>> len(primes_up_to(2000))
+303

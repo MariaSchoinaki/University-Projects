@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <meta charset='utf-8'>
+  <title>Σειρά Ασκήσεων 1</title>
+<link rel='stylesheet' href='https://eclass.aueb.gr/template/default/CSS/bootstrap-custom.css'><link rel='stylesheet' href='https://eclass.aueb.gr/template/default/CSS/font-awesome-4.7.0/css/font-awesome.css'><style>body { margin: 8px; background: none !important; }</style></head>
+<body>
+<h3>Γενικές οδηγίες</h3>
+<p>Στη σειρά ασκήσεων αυτή θα συμπληρώσετε τον κώδικα Python που βρίσκεται στο αρχείο <a href="/modules/document/file.php/INF259/hw1.py">hw1.py</a>, ως εξής:</p>
+<ol><li>Κατεβάστε το αρχείο <a href="/modules/document/file.php/INF259/hw1.py">hw1.py</a> στον υπολογιστή σας. (Σημειώστε τον κατάλογο όπου τοποθετήθηκε.)</li>
+<li>Μέσα από οποιονδήποτε editor για συγγραφή κώδικα (πχ, Notepad++) ανοίξτε το hw1.py (File &gt; Open)</li>
+<li>Το αρχείο που βλέπετε περιέχει συναρτήσεις των οποίων το σώμα πρέπει να συμπληρώσετε.</li>
+<li>Συμπληρώστε τα κενά (_____) ή κώδικα σύμφωνα με τις περιγραφές που σας δίνονται σε σχόλια (ανάμεσα στα """ .... """"). Στα σχόλια κάθε συνάρτησης δίνονται παραδείγματα (doctests) για την αναμενόμενη τιμή ή παρενέργεια (side-effect) για διάφορες τιμές ορισμάτων. (Στην συμπλήρωση κενών _________ δεν μπορείτε να χρησιμοποιήσετε επιπλέον γραμμές.)</li>
+<li>Όταν τελειώσετε με τις προσθήκες σας, αποθηκεύστε τις αλλαγές (στο ίδιο αρχείο hw1.py). (Δεν χρειάζεται να συμπληρώσετε το σώμα όλων των συναρτήσεων πριν προχωρήσετε σε έλεγχο ορθότητας/δοκιμές, μπορείτε να το κάνετε για μια συνάρτηση τη φορά.)</li>
+</ol><p>Μπορείτε να καλέσετε τις συναρτήσεις στο hw1.py από το διαδραστικό περιβάλλον της Python ως εξής:</p>
+<ol><li>Εκκινήστε το διαδραστικό περιβάλλον (εντολή python (Windows) ή python3 (Linux/MacOS) στη γραμμή εντολών) από τον ίδιο κατάλογο που περιέχει το hw1.py.</li>
+<li>Για να μπορείτε να καλέσετε όλες τις συναρτήσεις γράψτε (μετά τα &gt;&gt;&gt;):
+<table><tbody><tr><td>
+<pre>&gt;&gt;&gt; from hw1 import *</pre>
+</td>
+</tr></tbody></table><p>Εάν θέλετε να δοκιμάσετε μόνο μια συνάρτηση, πχ., την f, γράφετε:</p>
+<table><tbody><tr><td>
+<pre>&gt;&gt;&gt; from hw1 import f</pre>
+</td>
+</tr></tbody></table></li>
+<li>Δοκιμάστε αν οι συναρτήσεις έχουν σωστή συμπεριφορά, πχ.
+<table><tbody><tr><td>
+<pre>&gt;&gt;&gt; f(-1)<br />0.5</pre>
+</td>
+</tr></tbody></table></li>
+</ol><p>Εναλλακτικά, μπορείτε να εκτελέσετε τους αυτόματους ελέγχους για ορθότητα κώδικα (doctests)  που περιέχονται στα σχόλια αμέσως μετά τους ορισμούς συναρτήσεων.  Σε Windows από τη γραμμή εντολών γράψτε:</p>
+<table><tbody><tr><td>
+<pre>python -m doctest -v hw1.py</pre>
+</td>
+</tr></tbody></table><p> Σε Linux/MacOS γράψτε στο shell/terminal:</p>
+<table><tbody><tr><td>
+<pre>python3 -m doctest -v hw1.py</pre>
+</td>
+</tr></tbody></table><p>Στο τερματικό σας θα εμφανιστεί αναλυτική αναφορά λαθών.</p>
+<p>Αν εμφανιστεί μήνυμα λάθους από τον διερμηνευτή ή η συνάρτηση δεν κάνει τον σωστό υπολογισμό/παρενέργεια, επιστρέψτε στον text editor και αλλάξτε τον κώδικά σας. Έπειτα, πάλι αποθηκεύστε τις αλλαγές και δοκιμάστε τον κώδικα όπως παραπάνω, κοκ. Συνεχίστε μέχρι οι συναρτήσεις να έχουν τη συμπεριφορά που περιγράφεται στα σχόλια κάθε συνάρτησης. (<span style="text-decoration:underline;"><em>Προσοχή: δεν αρκεί να δίδεται το σωστό αποτέλεσμα μόνο για τα παραδείγματα στα σχόλια!</em></span>).</p>
+<p>Παραδίδετε τις απαντήσεις σας ανεβάζοντας στο eclass (μέσα από τον χώρο εργασιών) <strong>μόνο</strong> το τελικό hw1.py αρχείο <strong>σε συμπιεσμένη μορφή zip</strong> ή μέσα σε συμπιεσμένο φάκελο (βλ. <a href="/modules/announcements/index.php?course=INF259&amp;an_id=39980">παλαιότερη σχετική ανακοίνωση στις 'Ανακοινώσεις'</a>). (Άλλα αρχεία ή συνοδευτικά σχόλια αφαιρούνται αυτόματα.)</p>
+<p>Μπορείτε να παραδίνετε απαντήσεις (με τον παραπάνω τρόπο) χωρίς να έχετε συμπληρώσει το σώμα όλων των συναρτήσεων.</p>
+<p><strong>Σημείωση 1: </strong>δεν επιτρέπεται να κάνετε προσθήκες/αλλαγές στον κώδικα σε άλλα σε σημεία εκτός αυτά που σας υποδεικνύονται στα σχόλια. Τυχόν αλλαγές θα έχουν ως αποτέλεσμα μηδενικό βαθμό στην αντίστοιχη άσκηση. </p>
+<p><strong>Σημείωση 2:</strong> ο αριθμός των χαρακτήρων (_) στα κενά δεν υποδηλώνει κάτι. Οι απαντήσεις σας μπορούν να χρησιμοποιούν περισσότερο ή λιγότερο χώρο. Αφού συμπληρώσετε την απάντησή σας, αφαιρέστε όλους τους χαρακτήρες _ αλλιώς θα λάβετε μήνυμα λάθους από τον διερμηνευτή καθώς αποτιμάτε τις συναρτήσεις.</p>
+<h3>Άσκηση 1</h3>
+<p>Συμπληρώστε τα κενά _______ του κώδικα της συνάρτησης f ώστε η κλήση f(x) να υπολογίζει την τιμή της παράστασης 1/(2 + 3/(x+4) + 1/x) για οποιονδήποτε αριθμό x χρησιμοποιώντας μόνο κλητικές εκφράσεις που δεν περιέχουν ενθεματικούς τελεστές (+, /, ...).</p>
+<pre>def f(x):<br />    """ <br />    x -- ari8mos<br /><br />    Epistrefei tin timi 1/(2 + 3/(x+4) + 1/x).<br /><br />    &gt;&gt;&gt; f(-1)<br />    0.5<br />    &gt;&gt;&gt; round(f(-2), 4)<br />    0.3333<br />    &gt;&gt;&gt; round(f(-8), 4)<br />    0.8889<br />    """<br />    """ Xrhsimopoihste MONO ekfraseis klhshs,<br />    p.x., stis add, mul, pow, sqrt, truediv, ...<br />    OXI en8ematikous telestes (+, /, ...) """<br /><br />    return _______(______________________________)</pre>
+<h3>Άσκηση 2</h3>
+<p>Συμπληρώστε τα κενά _______ του κώδικα της συνάρτησης g ώστε η κλήση g(x, y) να υπολογίζει την τιμή της έκφρασης sqrt(add(pow(add(x, y), 2), pow(sub(x, y), 2))) για οποιουσδήποτε αριθμούς x, y χρησιμοποιώντας μόνο ενθεματικούς τελεστές (+, *, /, ** κτλ.) χωρίς να περιέχονται κλητικές εκφράσεις.</p>
+<pre>def g(x, y):<br />    """<br />    x,y -- ari8moi<br /><br />    Epistrefei timi isi me sqrt(add(pow(add(x, y), 2), pow(sub(x, y), 2)))<br /><br />    &gt;&gt;&gt; g(1, 1)<br />    2.0<br />    &gt;&gt;&gt; g(1.5, 1.5)<br />    3.0<br />    &gt;&gt;&gt; round(g(3, 1), 5)<br />    4.47214<br />    """<br /><br />    """ Xrhsimopoihste en8ematikous telestes(+, -, *, **, ...)<br />    OXI ekfraseis klhshs """<br /><br />    _________________________________________</pre>
+<p><em>Η απάντησή σας δεν πρέπει να χρησιμοποιεί περισσότερες γραμμές από τις γραμμές που καταλαμβάνουν τα κενά ________. (Ούτε να χρησιμοποιείτε πολλαπλές εντολές ή εκφράσεις σε μια γραμμή χωριζόμενες με ; ή , )</em></p>
+<h3>Άσκηση 3</h3>
+<p>Συμπληρώστε τα κενά _______ του κώδικα της how ώστε η κλήση how() να εμφανίζει 1 2 3 όπως περιγράφεται στα σχόλια.</p>
+<pre>def how():<br />    """Symplhrwste ta kena wste na didetai to<br />    akolou8o apotelesma<br /><br />    &gt;&gt;&gt; how()<br />    1 2 3<br />    """<br />    x = ______<br />    y = ______<br />    __________<br /><br />    x, y, z = y, z, -x<br />    x, y, z = y, z, -x<br /><br />    print(x, y, z)</pre>
+<p><em>Η απάντησή σας θα πρέπει να γραφεί μόνο στο χώρο που καταλαμβάνουν τα κενά __________ (ο ακριβής αριθμός τους δεν έχει σημασία.) (Όπου τα κενά καταλαμβάνουν ολόκληρη γραμμή δεν πρέπει να χρησιμοποιούνται περισσότερες γραμμές ούτε να χρησιμοποιούνται πολλαπλές εντολές ή εκφράσεις σε μια γραμμή χωριζόμενες με ; ή , ) Επίσης, δεν πρέπει να αλλάξετε τον υπόλοιπο κώδικα ή να αποφύγετε την εκτέλεση του.</em></p>
+<h3>Άσκηση 4</h3>
+<p>Συμπληρώστε τα κενά _______ του κώδικα της συνάρτησης func0 ώστε η τιμή της έκφρασης</p>
+<pre>func0('I') + ' ' + func0('Bi') + ' ' + 'Spider' </pre>
+<p>να είναι η συμβολοσειρά 'Itsy Bitsy Spider'.</p>
+<pre>def func0(s):<br />    """Symplhrwste ta kena wste na didetai to<br />    akolou8o apotelesma<br /><br />    &gt;&gt;&gt; func0('I') + ' ' + func0('Bi') + ' ' + 'Spider'<br />    'Itsy Bitsy Spider'<br />    """<br /><br />    return ___________________</pre>
+<p><em>Η απάντησή σας θα πρέπει να γραφεί μόνο στο χώρο που καταλαμβάνουν τα κενά __________ (ο ακριβής αριθμός τους δεν έχει σημασία.) Επίσης, δεν πρέπει να αλλάξετε τον υπόλοιπο κώδικα ή να αποφύγετε την εκτέλεση του.</em></p>
+<h3>Άσκηση 5</h3>
+<p>Συμπληρώστε την κενή γραμμή _______ του κώδικα της func1 ώστε οι εκφράσεις στα σχόλια να έχουν το αναγραφόμενο αποτέλεσμα.</p>
+<pre>def func1(n, c, s):<br />    """Symplhrwste ta kena wste:<br /><br />    &gt;&gt;&gt; func1(1, '*', '-')<br />    '*'<br />    &gt;&gt;&gt; func1(2, '*', '-')<br />    '**-**'<br />    &gt;&gt;&gt; func1(3, '*', '-')<br />    '***-***-***'<br />    &gt;&gt;&gt; func1(4, 'z', 'Z')<br />    'zzzzZzzzzZzzzzZzzzz'<br />    &gt;&gt;&gt; func1(1, '-', '*') == '-'<br />    True<br />    """<br />    _________________________________</pre>
+<p><em>Η απάντησή σας δεν πρέπει να χρησιμοποιεί περισσότερες γραμμές από τις γραμμές που καταλαμβάνουν τα κενά ________. (Ούτε να χρησιμοποιείτε πολλαπλές εντολές ή εκφράσεις σε μια γραμμή χωριζόμενες με ; ή , )</em></p>
+<h3>Άσκηση 6</h3>
+<p>Συμπληρώστε την κενή γραμμή _______ του κώδικα της func2 ώστε οι εκφράσεις στα σχόλια να έχουν το αναγραφόμενο αποτέλεσμα.</p>
+<pre>def func2(s):<br />    """Symplhrwste ta kena wste na didetai to<br />    akolou8o apotelesma<br /><br />    &gt;&gt;&gt; func2('la')<br />    'la-la'<br />    &gt;&gt;&gt; func2(func2('la'))<br />    'la-la-la-la'<br />    &gt;&gt;&gt; func2(func2(func2('la')))<br />    'la-la-la-la-la-la-la-la'<br />    """<br />    _____________________________________</pre>
+<p><em>Η απάντησή σας δεν πρέπει να χρησιμοποιεί περισσότερες γραμμές από τις γραμμές που καταλαμβάνουν τα κενά ________. (Ούτε να χρησιμοποιείτε πολλαπλές εντολές ή εκφράσεις σε μια γραμμή χωριζόμενες με ; ή , )</em></p>
+<h3>Άσκηση 7</h3>
+<p>Συμπληρώστε τα κενά _______ του κώδικα της add_inputs ώστε η κλήση add_inputs() να:</p>
+<ol><li>Ζητάει από τον χρήστη να εισάγει δύο ακέραιους αριθμούς (έναν σε κάθε γραμμή, χωρίς μήνυμα προτροπής).</li>
+<li>Επιστρέφει το άθροισμα των δυο αριθμών που έδωσε ο χρήστης.</li>
+</ol><pre>def add_inputs():<br />    """Ypologizei to a8roisma dyo akeraiwn pou dinei o xrhsths<br /><br />    &gt;&gt;&gt; add_inputs() #doctest: +SKIP<br /><strong>    3</strong><br /><strong>    4</strong><br />    7<br />    &gt;&gt;&gt; print(add_inputs()) #doctest: +SKIP<br /><strong>    9</strong><br /><strong>    10</strong><br />    19<br /><br />    H eisodos apo ton xristi einai oi ari8moi poy briskontai sthn 1h kai 2h<br />    seira meta thn klisi add_inputs().<br />    """<br />    return _______________________________</pre>
+<p><em>Η απάντησή σας δεν πρέπει να χρησιμοποιεί περισσότερες γραμμές από τις γραμμές που καταλαμβάνουν τα κενά ________. (Ούτε να χρησιμοποιείτε πολλαπλές εντολές ή εκφράσεις σε μια γραμμή χωριζόμενες με ; ή , ) Η είσοδος του χρήστη στα παραδείγματα είναι οι αριθμοί με <strong>έντονη εμφάνιση</strong>.</em></p>
+<h3>Άσκηση 8</h3>
+<p>Συμπληρώστε τα κενά _______ του κώδικα της parrot ώστε η κλήση parrot() να ζητάει και να επαναλαμβάνει την είσοδο του χρήστη 4 φορές, όπως θα έκανε ένας παπαγάλος που επαναλαμβάνει τις προτάσεις που ακούει. Θα πρέπει να συμπεριφέρεται όπως στο παράδειγμα που περιέχεται στα σχόλια. (Η είσοδος του χρήστη είναι με <strong>έντονη</strong> <strong>εμφάνιση</strong>. H παύλα - και το κενό που ακολουθεί δεν εισάγεται από τον χρήστη.)</p>
+<pre>def parrot():<br />    """Epanalambanei tin eisodo tou xristi gia 4 fores, opws<br />    akribws sta paradeigmata:<br /><br />    &gt;&gt;&gt; parrot() #doctest: +SKIP<br />    - <strong>Hello</strong><br />    - "Hello"<br />    - <strong>Who are you?</strong><br />    - "Who are you?"<br />    - <strong>I'm losing my patience...</strong><br />    - "I'm losing my patience..."<br />    - <strong>OK, forget it</strong><br />    - "OK, forget it"<br /><br />    H eisodos apo ton xristi einai i symboloseira stin 1h, 3h, 5h kai 7h <br />    grammi meta tin klisi parrot(). H eisodos den perilambanei to - kai to<br />    keno pou akolou8ei.<br />    """<br /><br />    print('- "' + input(______________________) + '"')</pre>
+<p><em>Η απάντησή σας θα πρέπει να γραφεί μόνο στο χώρο που καταλαμβάνουν τα κενά __________ (ο ακριβής αριθμός τους δεν έχει σημασία.) Επίσης, δεν πρέπει να αλλάξετε τον υπόλοιπο κώδικα ή να αποφύγετε την εκτέλεση του.</em></p>
+<h3>Άσκηση 9</h3>
+<p>Συμπληρώστε το σώμα της draw_number ώστε η κλήση draw_number(x) να εμφανίζει στο τερματικό x χαρακτήρες + ή x χαρακτήρες - εάν αντίστοιχα το x είναι θετικός ή αρνητικός αριθμός. Στην περίπτωση που το x είναι 0 δεν εμφανίζεται τίποτα. Η draw_number(x) επιστρέφει None.</p>
+<pre>def draw_number(x):<br />    """Emfanizei ton xarakthra + 'h - x fores<br /><br />    &gt;&gt;&gt; draw_number(5)<br />    +++++<br />    &gt;&gt;&gt; draw_number(0)<br />    &gt;&gt;&gt; draw_number(-3)<br />    ---<br />    &gt;&gt;&gt; draw_number(2) == None<br />    ++<br />    True<br />    """<br />    """ GRAPSTE TON KWDIKA SAS APO KATW """<br /><br /></pre>
+<h3>Άσκηση 10</h3>
+<p>Αλλάξτε τον κώδικα της fix_me ώστε η κλήση fix_me() να εμφανίζει στο τερματικό ακριβώς τα ίδια αποτελέσματα χωρίς όμως να επαναλαμβάνονται παρόμοιοι υπολογισμοί. Για τον σκοπό αυτό μπορείτε να χρησιμοποιήσετε κλητικές εκφράσεις σε δικές σας συναρτήσεις που θα ορίσετε μετά τη fix_me.</p>
+<pre>def fix_me():<br />    """Alla3te ti synartisi poy apokou8ei wste na min<br />    epanalambanetai o idios ypologismos/kwdikas polles fores.<br />    Mporeite na xrhsimopoihsete klhseis se synarthseis poy 8a orisete<br />    amesws meta to swma tis fix_me.<br /><br />    &gt;&gt;&gt; fix_me()<br />    Emvado kyklou aktinas 1 = 3.141592653589793 me perifereia = 6.283185307179586<br />    Emvado kyklou aktinas 2 = 12.566370614359172 me perifereia = 12.566370614359172<br />    Emvado isoskelous or8ogwniou trigwnou me ka8eti pleura 1 = 0.5 me perifereia = 3.414213562373095<br />    Emvado isoskelous or8ogwniou trigwnou me ka8eti pleura 5 = 12.5 me perifereia = 17.071067811865476<br />    """<br />    """ ALLA3TE TON PARAKATW KWDIKA """<br />    print('Emvado kyklou aktinas', 1, '=', 3.141592653589793 * 1**2,<br />          'me perifereia =', 2 * 3.141592653589793 * 1)<br />    print('Emvado kyklou aktinas', 2, '=', 3.141592653589793 * 2**2,<br />          'me perifereia =', 2 * 3.141592653589793 * 2)<br />    print('Emvado isoskelous or8ogwniou trigwnou me ka8eti pleura', 1,<br />          '=', 0.5 * 1 ** 2,<br />          'me perifereia =', 2 * 1 + sqrt(2 * 1**2))<br />    print('Emvado isoskelous or8ogwniou trigwnou me ka8eti pleura', 5,<br />          '=', 0.5 * 5 ** 2,<br />          'me perifereia =', 2 * 5 + sqrt(2 * 5**2))</pre>
+<p> </p>
+</body>
+</html>
