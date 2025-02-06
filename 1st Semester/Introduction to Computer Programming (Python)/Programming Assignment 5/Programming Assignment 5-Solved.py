@@ -4,24 +4,15 @@ from clock import *
 class RomanCascadeCounter(CascadeCounter):
     """Metritis CascadeCounter me endei3eis me rwmaikous ari8mous."""
     def __str__(self):
-        s, i, x = '', 0, self.value
-        roman_10, roman_5 = 'IXCM', 'VLD'
-        while x > 0:
-            if i == 3:
-                s = x * roman_10[i] + s
-                break
-        
-            d = x % 10 
-            if d == 9:
-                s =  roman_10[i] + roman_10[i + 1] + s
-            elif d == 4:
-                s = roman_10[i] + roman_5[i] + s
-            else:
-                s = (d // 5) * roman_5[i] + (d % 5) * roman_10[i] + s
-
-            x, i = x // 10, i + 1
-
-        return (9 - len(s)) * '-' + s
+        tens = self.value // 10
+        units = self.value % 10
+        tens_s = 'L' if tens == 5 else tens*'X'
+        if units < 5:
+            units_s = units*'I'
+        else:
+            units_s = 'V' + (units-5)*'I'
+        sz = len(tens_s + units_s)
+        return '-'*(9-sz) + tens_s + units_s
 
 
 class RomanClock(Clock):
@@ -45,8 +36,8 @@ class RomanClock(Clock):
     """
     def __init__(self, h, m, s):
         self._h = RomanCascadeCounter(None, 24, h)
-        self._m = ___________________________________
-        _____________________________________________
+        self._m = RomanCascadeCounter(self._h, 60, m)
+        self._s = RomanCascadeCounter(self._m, 60, s)
     
 
 #-------------------- Askisi 2 ----------------------------
@@ -72,11 +63,13 @@ class DayCounter(CyclicCounter):
     """
     _days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',\
             'Thursday', 'Friday', 'Saturday']
-    def __init__(self, day = 'Sunday'):
-        CyclicCounter.__init__(self,________________________)
 
+    def __init__(self, day = 'Sunday'):
+        index = self._days.index(day)
+        super().__init__(len(self._days), index)
+        
     def __str__(self):
-        return ___________________________
+        return self._days[int(super().__str__())]
 
 
 #-------------------- Askisi 3 ----------------------------
@@ -104,33 +97,12 @@ class DayClock(Clock):
     """
     def __init__(self, h = 0, m = 0, s = 0, day = 'Sunday'):
         self._d = DayCounter(day)
-        ___________________________________________
-        ___________________________________________
-        ___________________________________________
+        self._h = CascadeCounter(None, 24, h)
+        self._m = CascadeCounter(self._h, 60, m)
+        self._s = CascadeCounter(self._m, 60, s)
 
+    """SYMPLHRWSTE ME TON KWDIKA SAS APO KATW."""
     def __str__(self):
-        ___________________________________________
-
-
-
-#-------------------- Askisi 4 ----------------------------
-class __________________:
-    """Antistrofos xronometritis.
-
-    >>> c = Timer(0, 0, 2)
-    >>> str(c)
-    '00:00:02'
-    >>> c.advance()
-    >>> str(c)
-    '00:00:01'
-    >>> c.advance()
-    >>> str(c)
-    '00:00:00'
-    >>> c.advance()
-    >>> str(c)
-    'TI DI DI DI'
-    >>> c.advance()
-    >>> str(c)
-    'TI DI DI DI'
-    """
-    """GRAPSTE TON KWDIKA SAS APO KATW."""
+        if (str)(self._h) == (str)(self._m) == (str)(self._s) == '00':
+           self._d.advance()
+        return '{0}:{1}:{2} {3}'.format(self._h, self._m, self._s, self._d)
