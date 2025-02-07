@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/shina/Desktop/Project1/Circuit3.vhd
+source_file = 1, c:/intelfpga_lite/19.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/19.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/19.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/19.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Users/shina/Desktop/Project1/db/Circuit3.cbx.xml
+design_name = Cirquit3
+instance = comp, \x2~I\, x2, Cirquit3, 1
+instance = comp, \x3~I\, x3, Cirquit3, 1
+instance = comp, \x1~I\, x1, Cirquit3, 1
+instance = comp, \I3|f1\, I3|f1, Cirquit3, 1
+instance = comp, \f~I\, f, Cirquit3, 1

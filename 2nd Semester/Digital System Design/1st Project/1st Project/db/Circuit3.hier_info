@@ -1,0 +1,35 @@
+|Cirquit3
+x1 => and_gate:I1.x1
+x1 => and_gate:I2.x1
+x1 => and_gate:I0.x1
+x2 => and_gate:I2.x2
+x3 => and_gate:I1.x2
+x3 => and_gate:I0.x2
+f << or_gate:I3.f1
+
+
+|Cirquit3|and_gate:I0
+x1 => f1.IN0
+x2 => f1.IN1
+f1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cirquit3|and_gate:I1
+x1 => f1.IN0
+x2 => f1.IN1
+f1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cirquit3|and_gate:I2
+x1 => f1.IN0
+x2 => f1.IN1
+f1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cirquit3|or_gate:I3
+x1 => f1.IN0
+x2 => f1.IN1
+x3 => f1.IN1
+f1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,502 @@
+$comment
+	File created using the following command:
+		vcd file Project2B.msim.vcd -direction
+$end
+$date
+	Sun Jun 05 20:59:11 2022
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module project2b_vhd_vec_tst $end
+$var wire 1 ! A [15] $end
+$var wire 1 " A [14] $end
+$var wire 1 # A [13] $end
+$var wire 1 $ A [12] $end
+$var wire 1 % A [11] $end
+$var wire 1 & A [10] $end
+$var wire 1 ' A [9] $end
+$var wire 1 ( A [8] $end
+$var wire 1 ) A [7] $end
+$var wire 1 * A [6] $end
+$var wire 1 + A [5] $end
+$var wire 1 , A [4] $end
+$var wire 1 - A [3] $end
+$var wire 1 . A [2] $end
+$var wire 1 / A [1] $end
+$var wire 1 0 A [0] $end
+$var wire 1 1 B [15] $end
+$var wire 1 2 B [14] $end
+$var wire 1 3 B [13] $end
+$var wire 1 4 B [12] $end
+$var wire 1 5 B [11] $end
+$var wire 1 6 B [10] $end
+$var wire 1 7 B [9] $end
+$var wire 1 8 B [8] $end
+$var wire 1 9 B [7] $end
+$var wire 1 : B [6] $end
+$var wire 1 ; B [5] $end
+$var wire 1 < B [4] $end
+$var wire 1 = B [3] $end
+$var wire 1 > B [2] $end
+$var wire 1 ? B [1] $end
+$var wire 1 @ B [0] $end
+$var wire 1 A OPCODE [2] $end
+$var wire 1 B OPCODE [1] $end
+$var wire 1 C OPCODE [0] $end
+$var wire 1 D OVERFLOW $end
+$var wire 1 E RESULT [15] $end
+$var wire 1 F RESULT [14] $end
+$var wire 1 G RESULT [13] $end
+$var wire 1 H RESULT [12] $end
+$var wire 1 I RESULT [11] $end
+$var wire 1 J RESULT [10] $end
+$var wire 1 K RESULT [9] $end
+$var wire 1 L RESULT [8] $end
+$var wire 1 M RESULT [7] $end
+$var wire 1 N RESULT [6] $end
+$var wire 1 O RESULT [5] $end
+$var wire 1 P RESULT [4] $end
+$var wire 1 Q RESULT [3] $end
+$var wire 1 R RESULT [2] $end
+$var wire 1 S RESULT [1] $end
+$var wire 1 T RESULT [0] $end
+
+$scope module i1 $end
+$var wire 1 U gnd $end
+$var wire 1 V vcc $end
+$var wire 1 W unknown $end
+$var wire 1 X devoe $end
+$var wire 1 Y devclrn $end
+$var wire 1 Z devpor $end
+$var wire 1 [ ww_devoe $end
+$var wire 1 \ ww_devclrn $end
+$var wire 1 ] ww_devpor $end
+$var wire 1 ^ ww_OPCODE [2] $end
+$var wire 1 _ ww_OPCODE [1] $end
+$var wire 1 ` ww_OPCODE [0] $end
+$var wire 1 a ww_A [15] $end
+$var wire 1 b ww_A [14] $end
+$var wire 1 c ww_A [13] $end
+$var wire 1 d ww_A [12] $end
+$var wire 1 e ww_A [11] $end
+$var wire 1 f ww_A [10] $end
+$var wire 1 g ww_A [9] $end
+$var wire 1 h ww_A [8] $end
+$var wire 1 i ww_A [7] $end
+$var wire 1 j ww_A [6] $end
+$var wire 1 k ww_A [5] $end
+$var wire 1 l ww_A [4] $end
+$var wire 1 m ww_A [3] $end
+$var wire 1 n ww_A [2] $end
+$var wire 1 o ww_A [1] $end
+$var wire 1 p ww_A [0] $end
+$var wire 1 q ww_B [15] $end
+$var wire 1 r ww_B [14] $end
+$var wire 1 s ww_B [13] $end
+$var wire 1 t ww_B [12] $end
+$var wire 1 u ww_B [11] $end
+$var wire 1 v ww_B [10] $end
+$var wire 1 w ww_B [9] $end
+$var wire 1 x ww_B [8] $end
+$var wire 1 y ww_B [7] $end
+$var wire 1 z ww_B [6] $end
+$var wire 1 { ww_B [5] $end
+$var wire 1 | ww_B [4] $end
+$var wire 1 } ww_B [3] $end
+$var wire 1 ~ ww_B [2] $end
+$var wire 1 !! ww_B [1] $end
+$var wire 1 "! ww_B [0] $end
+$var wire 1 #! ww_OVERFLOW $end
+$var wire 1 $! ww_RESULT [15] $end
+$var wire 1 %! ww_RESULT [14] $end
+$var wire 1 &! ww_RESULT [13] $end
+$var wire 1 '! ww_RESULT [12] $end
+$var wire 1 (! ww_RESULT [11] $end
+$var wire 1 )! ww_RESULT [10] $end
+$var wire 1 *! ww_RESULT [9] $end
+$var wire 1 +! ww_RESULT [8] $end
+$var wire 1 ,! ww_RESULT [7] $end
+$var wire 1 -! ww_RESULT [6] $end
+$var wire 1 .! ww_RESULT [5] $end
+$var wire 1 /! ww_RESULT [4] $end
+$var wire 1 0! ww_RESULT [3] $end
+$var wire 1 1! ww_RESULT [2] $end
+$var wire 1 2! ww_RESULT [1] $end
+$var wire 1 3! ww_RESULT [0] $end
+$var wire 1 4! \I0|AINVERT~0_combout\ $end
+$var wire 1 5! \I2:15:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 6! \I2:14:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 7! \I2:11:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 8! \I2:10:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 9! \I2:9:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 :! \I2:8:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 ;! \I2:7:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 <! \I2:6:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 =! \I2:4:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 >! \I2:3:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 ?! \I2:1:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 @! \I0|Equal6~0_combout\ $end
+$var wire 1 A! \I1|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 B! \I2:1:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 C! \I2:2:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 D! \I2:2:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 E! \I2:3:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 F! \I2:4:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 G! \I2:5:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 H! \I2:5:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 I! \I2:6:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 J! \I2:7:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 K! \I2:8:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 L! \I2:9:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 M! \I2:10:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 N! \I2:11:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 O! \I2:12:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 P! \I2:12:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 Q! \I2:13:I3|I1|INVERTER~0_combout\ $end
+$var wire 1 R! \I2:13:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 S! \I2:14:I3|I4|CARRY_OUT~0_combout\ $end
+$var wire 1 T! \I4|RESULT1~0_combout\ $end
+$var wire 1 U! \I1|I6|RESULT~2_combout\ $end
+$var wire 1 V! \I1|I6|RESULT~3_combout\ $end
+$var wire 1 W! \I1|I6|RESULT~4_combout\ $end
+$var wire 1 X! \I2:1:I3|I0|INVERTER~0_combout\ $end
+$var wire 1 Y! \I0|OPERATION[0]~1_combout\ $end
+$var wire 1 Z! \I2:1:I3|I5|R~0_combout\ $end
+$var wire 1 [! \I0|OPERATION[1]~0_combout\ $end
+$var wire 1 \! \I2:1:I3|I6|RESULT~0_combout\ $end
+$var wire 1 ]! \I2:1:I3|I6|RESULT~1_combout\ $end
+$var wire 1 ^! \I2:2:I3|I6|RESULT~1_combout\ $end
+$var wire 1 _! \I2:2:I3|I6|RESULT~0_combout\ $end
+$var wire 1 `! \I2:2:I3|I6|RESULT~2_combout\ $end
+$var wire 1 a! \I2:3:I3|I0|INVERTER~0_combout\ $end
+$var wire 1 b! \I2:3:I3|I5|R~0_combout\ $end
+$var wire 1 c! \I2:3:I3|I6|RESULT~0_combout\ $end
+$var wire 1 d! \I2:3:I3|I6|RESULT~1_combout\ $end
+$var wire 1 e! \I2:4:I3|I6|RESULT~1_combout\ $end
+$var wire 1 f! \I2:4:I3|I6|RESULT~0_combout\ $end
+$var wire 1 g! \I2:4:I3|I6|RESULT~2_combout\ $end
+$var wire 1 h! \I2:5:I3|I0|INVERTER~0_combout\ $end
+$var wire 1 i! \I2:5:I3|I5|R~0_combout\ $end
+$var wire 1 j! \I2:5:I3|I6|RESULT~0_combout\ $end
+$var wire 1 k! \I2:5:I3|I6|RESULT~1_combout\ $end
+$var wire 1 l! \I2:6:I3|I6|RESULT~1_combout\ $end
+$var wire 1 m! \I2:6:I3|I6|RESULT~0_combout\ $end
+$var wire 1 n! \I2:6:I3|I6|RESULT~2_combout\ $end
+$var wire 1 o! \I2:7:I3|I0|INVERTER~0_combout\ $end
+$var wire 1 p! \I2:7:I3|I5|R~0_combout\ $end
+$var wire 1 q! \I2:7:I3|I6|RESULT~0_combout\ $end
+$var wire 1 r! \I2:7:I3|I6|RESULT~1_combout\ $end
+$var wire 1 s! \I2:8:I3|I6|RESULT~1_combout\ $end
+$var wire 1 t! \I2:8:I3|I6|RESULT~0_combout\ $end
+$var wire 1 u! \I2:8:I3|I6|RESULT~2_combout\ $end
+$var wire 1 v! \I2:9:I3|I0|INVERTER~0_combout\ $end
+$var wire 1 w! \I2:9:I3|I5|R~0_combout\ $end
+$var wire 1 x! \I2:9:I3|I6|RESULT~0_combout\ $end
+$var wire 1 y! \I2:9:I3|I6|RESULT~1_combout\ $end
+$var wire 1 z! \I2:10:I3|I6|RESULT~1_combout\ $end
+$var wire 1 {! \I2:10:I3|I6|RESULT~0_combout\ $end
+$var wire 1 |! \I2:10:I3|I6|RESULT~2_combout\ $end
+$var wire 1 }! \I2:11:I3|I0|INVERTER~0_combout\ $end
+$var wire 1 ~! \I2:11:I3|I5|R~0_combout\ $end
+$var wire 1 !" \I2:11:I3|I6|RESULT~0_combout\ $end
+$var wire 1 "" \I2:11:I3|I6|RESULT~1_combout\ $end
+$var wire 1 #" \I2:12:I3|I6|RESULT~1_combout\ $end
+$var wire 1 $" \I2:12:I3|I6|RESULT~0_combout\ $end
+$var wire 1 %" \I2:12:I3|I6|RESULT~2_combout\ $end
+$var wire 1 &" \I2:13:I3|I0|INVERTER~0_combout\ $end
+$var wire 1 '" \I2:13:I3|I5|R~0_combout\ $end
+$var wire 1 (" \I2:13:I3|I6|RESULT~0_combout\ $end
+$var wire 1 )" \I2:13:I3|I6|RESULT~1_combout\ $end
+$var wire 1 *" \I2:14:I3|I6|RESULT~1_combout\ $end
+$var wire 1 +" \I2:14:I3|I6|RESULT~0_combout\ $end
+$var wire 1 ," \I2:14:I3|I6|RESULT~2_combout\ $end
+$var wire 1 -" \I2:15:I3|I0|INVERTER~0_combout\ $end
+$var wire 1 ." \I2:15:I3|I5|R~0_combout\ $end
+$var wire 1 /" \I2:15:I3|I6|RESULT~0_combout\ $end
+$var wire 1 0" \I2:15:I3|I6|RESULT~1_combout\ $end
+$var wire 1 1" \OPCODE~combout\ [2] $end
+$var wire 1 2" \OPCODE~combout\ [1] $end
+$var wire 1 3" \OPCODE~combout\ [0] $end
+$var wire 1 4" \A~combout\ [15] $end
+$var wire 1 5" \A~combout\ [14] $end
+$var wire 1 6" \A~combout\ [13] $end
+$var wire 1 7" \A~combout\ [12] $end
+$var wire 1 8" \A~combout\ [11] $end
+$var wire 1 9" \A~combout\ [10] $end
+$var wire 1 :" \A~combout\ [9] $end
+$var wire 1 ;" \A~combout\ [8] $end
+$var wire 1 <" \A~combout\ [7] $end
+$var wire 1 =" \A~combout\ [6] $end
+$var wire 1 >" \A~combout\ [5] $end
+$var wire 1 ?" \A~combout\ [4] $end
+$var wire 1 @" \A~combout\ [3] $end
+$var wire 1 A" \A~combout\ [2] $end
+$var wire 1 B" \A~combout\ [1] $end
+$var wire 1 C" \A~combout\ [0] $end
+$var wire 1 D" \B~combout\ [15] $end
+$var wire 1 E" \B~combout\ [14] $end
+$var wire 1 F" \B~combout\ [13] $end
+$var wire 1 G" \B~combout\ [12] $end
+$var wire 1 H" \B~combout\ [11] $end
+$var wire 1 I" \B~combout\ [10] $end
+$var wire 1 J" \B~combout\ [9] $end
+$var wire 1 K" \B~combout\ [8] $end
+$var wire 1 L" \B~combout\ [7] $end
+$var wire 1 M" \B~combout\ [6] $end
+$var wire 1 N" \B~combout\ [5] $end
+$var wire 1 O" \B~combout\ [4] $end
+$var wire 1 P" \B~combout\ [3] $end
+$var wire 1 Q" \B~combout\ [2] $end
+$var wire 1 R" \B~combout\ [1] $end
+$var wire 1 S" \B~combout\ [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0D
+0U
+1V
+xW
+1X
+1Y
+1Z
+1[
+1\
+1]
+0#!
+04!
+15!
+16!
+07!
+18!
+09!
+1:!
+0;!
+1<!
+1=!
+0>!
+0?!
+0@!
+1A!
+0B!
+0C!
+0D!
+0E!
+1F!
+0G!
+0H!
+1I!
+0J!
+1K!
+0L!
+1M!
+0N!
+1O!
+1P!
+1Q!
+1R!
+1S!
+0T!
+0U!
+1V!
+1W!
+0X!
+1Y!
+0Z!
+1[!
+0\!
+0]!
+1^!
+0_!
+0`!
+0a!
+0b!
+0c!
+0d!
+1e!
+1f!
+1g!
+0h!
+0i!
+0j!
+0k!
+1l!
+1m!
+1n!
+0o!
+0p!
+0q!
+0r!
+1s!
+1t!
+1u!
+0v!
+0w!
+0x!
+0y!
+1z!
+1{!
+1|!
+0}!
+0~!
+0!"
+0""
+1#"
+1$"
+1%"
+0&"
+1'"
+0("
+0)"
+1*"
+1+"
+1,"
+0-"
+1."
+0/"
+00"
+0!
+1"
+0#
+1$
+0%
+1&
+0'
+1(
+0)
+1*
+0+
+1,
+0-
+0.
+0/
+10
+11
+12
+13
+14
+05
+16
+07
+18
+09
+1:
+0;
+1<
+0=
+0>
+0?
+1@
+0A
+0B
+0C
+0E
+1F
+0G
+1H
+0I
+1J
+0K
+1L
+0M
+1N
+0O
+1P
+0Q
+0R
+0S
+1T
+0^
+0_
+0`
+0a
+1b
+0c
+1d
+0e
+1f
+0g
+1h
+0i
+1j
+0k
+1l
+0m
+0n
+0o
+1p
+1q
+1r
+1s
+1t
+0u
+1v
+0w
+1x
+0y
+1z
+0{
+1|
+0}
+0~
+0!!
+1"!
+0$!
+1%!
+0&!
+1'!
+0(!
+1)!
+0*!
+1+!
+0,!
+1-!
+0.!
+1/!
+00!
+01!
+02!
+13!
+01"
+02"
+03"
+04"
+15"
+06"
+17"
+08"
+19"
+0:"
+1;"
+0<"
+1="
+0>"
+1?"
+0@"
+0A"
+0B"
+1C"
+1D"
+1E"
+1F"
+1G"
+0H"
+1I"
+0J"
+1K"
+0L"
+1M"
+0N"
+1O"
+0P"
+0Q"
+0R"
+1S"
+$end
+#1000000

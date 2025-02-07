@@ -1,0 +1,189 @@
+Flow report for Project2B
+Sun Jun 05 20:59:08 2022
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------+
+; Flow Summary                                                        ;
++-----------------------+---------------------------------------------+
+; Flow Status           ; Successful - Sun Jun 05 20:59:08 2022       ;
+; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name         ; Project2B                                   ;
+; Top-level Entity Name ; Project2B                                   ;
+; Family                ; MAX V                                       ;
+; Total logic elements  ; 91 / 160 ( 57 % )                           ;
+; Total pins            ; 52 / 79 ( 66 % )                            ;
+; Total virtual pins    ; 0                                           ;
+; UFM blocks            ; 0 / 1 ( 0 % )                               ;
+; Device                ; 5M160ZT100C4                                ;
+; Timing Models         ; Final                                       ;
++-----------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 06/05/2022 20:14:35 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Project2B           ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                    ;
++---------------------------------+---------------------------------+---------------+-------------+-----------------------------------+
+; Assignment Name                 ; Value                           ; Default Value ; Entity Name ; Section Id                        ;
++---------------------------------+---------------------------------+---------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID           ; 103773280299487.165444927529936 ; --            ; --          ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                             ; --            ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                             ; --            ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                             ; --            ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                             ; --            ; --          ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT          ; Verilog Hdl                     ; --            ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL             ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --                                ;
+; EDA_TIME_SCALE                  ; 1 ps                            ; --            ; --          ; eda_simulation                    ;
+; PROJECT_OUTPUT_DIRECTORY        ; output_files                    ; --            ; --          ; --                                ;
++---------------------------------+---------------------------------+---------------+-------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4761 MB             ; 00:00:22                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 5078 MB             ; 00:00:02                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4665 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4616 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4610 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4616 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4614 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4616 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4614 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4616 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4614 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4620 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4610 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4620 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4614 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4616 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4614 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4616 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4614 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4620 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4614 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4616 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4614 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4616 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4614 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4620 MB             ; 00:00:01                           ;
+; Total                ; 00:00:57     ; --                      ; --                  ; 00:00:49                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-H3OCJMO8  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Project2B -c Project2B
+quartus_fit --read_settings_files=off --write_settings_files=off Project2B -c Project2B
+quartus_asm --read_settings_files=off --write_settings_files=off Project2B -c Project2B
+quartus_sta Project2B -c Project2B
+quartus_eda --read_settings_files=off --write_settings_files=off Project2B -c Project2B
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Project2B -c Project2B --vector_source="C:/Users/shina/Desktop/Project 2/Waveform1.vwf" --testbench_file="C:/Users/shina/Desktop/Project 2/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/shina/Desktop/Project 2/simulation/qsim/" Project2B -c Project2B
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Project2B -c Project2B --vector_source="C:/Users/shina/Desktop/Project 2/Waveform1.vwf" --testbench_file="C:/Users/shina/Desktop/Project 2/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/shina/Desktop/Project 2/simulation/qsim/" Project2B -c Project2B
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Project2B -c Project2B --vector_source="C:/Users/shina/Desktop/Project 2/Waveform1.vwf" --testbench_file="C:/Users/shina/Desktop/Project 2/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/shina/Desktop/Project 2/simulation/qsim/" Project2B -c Project2B
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Project2B -c Project2B --vector_source="C:/Users/shina/Desktop/Project 2/Waveform1.vwf" --testbench_file="C:/Users/shina/Desktop/Project 2/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/shina/Desktop/Project 2/simulation/qsim/" Project2B -c Project2B
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Project2B -c Project2B --vector_source="C:/Users/shina/Desktop/Project 2/Waveform1.vwf" --testbench_file="C:/Users/shina/Desktop/Project 2/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/shina/Desktop/Project 2/simulation/qsim/" Project2B -c Project2B
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Project2B -c Project2B --vector_source="C:/Users/shina/Desktop/Project 2/Waveform1.vwf" --testbench_file="C:/Users/shina/Desktop/Project 2/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/shina/Desktop/Project 2/simulation/qsim/" Project2B -c Project2B
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Project2B -c Project2B --vector_source="C:/Users/shina/Desktop/Project 2/Waveform1.vwf" --testbench_file="C:/Users/shina/Desktop/Project 2/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/shina/Desktop/Project 2/simulation/qsim/" Project2B -c Project2B
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Project2B -c Project2B --vector_source="C:/Users/shina/Desktop/Project 2/Waveform1.vwf" --testbench_file="C:/Users/shina/Desktop/Project 2/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/shina/Desktop/Project 2/simulation/qsim/" Project2B -c Project2B
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Project2B -c Project2B --vector_source="C:/Users/shina/Desktop/Project 2/Waveform1.vwf" --testbench_file="C:/Users/shina/Desktop/Project 2/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/shina/Desktop/Project 2/simulation/qsim/" Project2B -c Project2B
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Project2B -c Project2B --vector_source="C:/Users/shina/Desktop/Project 2/Waveform1.vwf" --testbench_file="C:/Users/shina/Desktop/Project 2/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/shina/Desktop/Project 2/simulation/qsim/" Project2B -c Project2B
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Project2B -c Project2B --vector_source="C:/Users/shina/Desktop/Project 2/Waveform1.vwf" --testbench_file="C:/Users/shina/Desktop/Project 2/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/shina/Desktop/Project 2/simulation/qsim/" Project2B -c Project2B
+
+
+

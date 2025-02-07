@@ -1,0 +1,182 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/shina/Desktop/Project 2/simulation/qsim
+Eproject2
+Z1 w1654448746
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx4 maxv 14 maxv_atom_pack 0 22 `YXhbnPNiS:bB3zbmbF772
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx4 maxv 15 maxv_components 0 22 EJJMbHV<EJ`DANOSmdPih1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z8 8Project2.vho
+Z9 FProject2.vho
+l0
+L35
+VGRDG0dmUGf?Fe02]70oJE0
+!s100 fObiHHmEOQQaUC;PngM0N3
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1654448748
+!i10b 1
+Z12 !s108 1654448748.000000
+Z13 !s90 -work|work|Project2.vho|
+Z14 !s107 Project2.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 8 project2 0 22 GRDG0dmUGf?Fe02]70oJE0
+l82
+L51
+VhVeMRFj=BF@KnToFaWLc02
+!s100 <gn7:=fK?jnJ1CYF7R01M3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eproject2_vhd_vec_tst
+Z17 w1654448744
+R6
+R7
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L32
+V:hAT0zbKo9Y[5[WIF]KM41
+!s100 =Bz25_^UI9J3l8G9fZz;53
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform.vwf.vht|
+Z21 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Aproject2_arch
+R6
+R7
+DEx4 work 20 project2_vhd_vec_tst 0 22 :hAT0zbKo9Y[5[WIF]KM41
+l57
+L34
+Vk0`<DBmG`^PVbSeCU;B3;1
+!s100 `A^ngK2:znTUHf7D_PBkP0
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16
+Eproject2b
+Z22 w1654451948
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+Z23 8Project2B.vho
+Z24 FProject2B.vho
+l0
+L35
+VHOON^XT8eSh[LQfh9FFg=2
+!s100 HI`F:oaWM3<;ZUC>KLWf[1
+R10
+32
+Z25 !s110 1654451949
+!i10b 1
+Z26 !s108 1654451949.000000
+Z27 !s90 -work|work|Project2B.vho|
+Z28 !s107 Project2B.vho|
+!i113 1
+R15
+R16
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 9 project2b 0 22 HOON^XT8eSh[LQfh9FFg=2
+l158
+L48
+Vl5bVSE<BYkB@E0=IdF;z<2
+!s100 P>D?97@dZhAWn5^dgHUi:2
+R10
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R15
+R16
+Eproject2b_vhd_vec_tst
+Z29 w1654451946
+R6
+R7
+R0
+Z30 8Waveform1.vwf.vht
+Z31 FWaveform1.vwf.vht
+l0
+L32
+VboiF6iG^BGXWT[7:>B4ob0
+!s100 TmY[NAz?=k=nN1dZ`4=hk3
+R10
+32
+Z32 !s110 1654451950
+!i10b 1
+Z33 !s108 1654451950.000000
+Z34 !s90 -work|work|Waveform1.vwf.vht|
+Z35 !s107 Waveform1.vwf.vht|
+!i113 1
+R15
+R16
+Aproject2b_arch
+R6
+R7
+Z36 DEx4 work 21 project2b_vhd_vec_tst 0 22 boiF6iG^BGXWT[7:>B4ob0
+l51
+L34
+Vff4FH>=:KWhoBg[n9[H7D2
+!s100 ffWPc>Ooi1BcgG6<?]k7B3
+R10
+32
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R15
+R16

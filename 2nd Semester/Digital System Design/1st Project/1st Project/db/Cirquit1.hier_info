@@ -1,0 +1,38 @@
+|Cirquit1
+x1 => MyOr2:I2.x1
+x2 => MyOr1:I1.x1
+x2 => MyOr2:I2.x2
+x2 => MyOr1:I0.x1
+x3 => ~NO_FANOUT~
+x4 => MyOr1:I0.x2
+x4 => MyOr2:I2.x3
+x5 => MyOr1:I1.x2
+f << MyAnd:I3.f1
+
+
+|Cirquit1|MyOr1:I0
+x1 => f1.IN0
+x2 => f1.IN1
+f1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cirquit1|MyOr1:I1
+x1 => f1.IN0
+x2 => f1.IN1
+f1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cirquit1|MyOr2:I2
+x1 => f1.IN0
+x2 => f1.IN1
+x3 => f1.IN1
+f1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cirquit1|MyAnd:I3
+x1 => f1.IN0
+x2 => f1.IN1
+x3 => f1.IN1
+f1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
+
+

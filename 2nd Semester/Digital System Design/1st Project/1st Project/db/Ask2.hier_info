@@ -1,0 +1,14 @@
+|Cirquit2
+f <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+x1 => inst.IN0
+x3 => inst6.IN0
+x3 => inst5.IN1
+x3 => inst2.IN0
+x2 => inst6.IN1
+x2 => inst4.IN1
+x2 => inst1.IN0
+x4 => inst4.IN0
+x4 => inst5.IN0
+x4 => inst3.IN0
+
+

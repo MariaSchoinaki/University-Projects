@@ -1,0 +1,257 @@
+Analysis & Synthesis report for Project2
+Sun Jun 05 19:55:03 2022
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun Jun 05 19:55:03 2022       ;
+; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name               ; Project2                                    ;
+; Top-level Entity Name       ; Project2                                    ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 6                                           ;
+; Total pins                  ; 9                                           ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; Project2           ; Project2           ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                  ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------+---------+
+; Project2.vhd                     ; yes             ; User VHDL File  ; C:/Users/shina/Desktop/Project 2/Project2.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Total logic elements                        ; 6       ;
+;     -- Combinational with no register       ; 6       ;
+;     -- Register only                        ; 0       ;
+;     -- Combinational with a register        ; 0       ;
+;                                             ;         ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 4       ;
+;     -- 3 input functions                    ; 0       ;
+;     -- 2 input functions                    ; 2       ;
+;     -- 1 input functions                    ; 0       ;
+;     -- 0 input functions                    ; 0       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 6       ;
+;     -- arithmetic mode                      ; 0       ;
+;     -- qfbk mode                            ; 0       ;
+;     -- register cascade mode                ; 0       ;
+;     -- synchronous clear/load mode          ; 0       ;
+;     -- asynchronous clear/load mode         ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+; I/O pins                                    ; 9       ;
+; Maximum fan-out node                        ; AINVERT ;
+; Maximum fan-out                             ; 3       ;
+; Total fan-out                               ; 22      ;
+; Average fan-out                             ; 1.47    ;
++---------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name           ; Entity Name      ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------+------------------+--------------+
+; |Project2                  ; 6 (0)       ; 0            ; 0          ; 9    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Project2                     ; Project2         ; work         ;
+;    |MULT1:I0|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Project2|MULT1:I0            ; MULT1            ; work         ;
+;    |MULT1:I1|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Project2|MULT1:I1            ; MULT1            ; work         ;
+;    |MULT2:I6|              ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Project2|MULT2:I6            ; MULT2            ; work         ;
+;    |OPERATION3_ADDER:I4|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Project2|OPERATION3_ADDER:I4 ; OPERATION3_ADDER ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Sun Jun 05 19:54:38 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project2 -c Project2
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning (12090): Entity "MULT2" obtained from "Project2.vhd" instead of from Quartus Prime megafunction library File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 131
+Info (12021): Found 14 design units, including 7 entities, in source file project2.vhd
+    Info (12022): Found design unit 1: OPERATION1_AND-OP1 File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 22
+    Info (12022): Found design unit 2: OPERATION2_OR-OP2 File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 42
+    Info (12022): Found design unit 3: OPERATION3_ADDER-OP3 File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 68
+    Info (12022): Found design unit 4: OPERATION4_XOR-OP4 File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 90
+    Info (12022): Found design unit 5: MULT1-STRUCTURAL File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 115
+    Info (12022): Found design unit 6: MULT2-STRUCTURAL File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 142
+    Info (12022): Found design unit 7: Project2-STRUCTURAL File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 170
+    Info (12023): Found entity 1: OPERATION1_AND File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 13
+    Info (12023): Found entity 2: OPERATION2_OR File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 35
+    Info (12023): Found entity 3: OPERATION3_ADDER File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 57
+    Info (12023): Found entity 4: OPERATION4_XOR File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 82
+    Info (12023): Found entity 5: MULT1 File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 104
+    Info (12023): Found entity 6: MULT2 File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 131
+    Info (12023): Found entity 7: Project2 File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 158
+Info (12127): Elaborating entity "Project2" for the top level hierarchy
+Info (12128): Elaborating entity "MULT1" for hierarchy "MULT1:I0" File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 226
+Info (12128): Elaborating entity "OPERATION1_AND" for hierarchy "OPERATION1_AND:I2" File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 228
+Info (12128): Elaborating entity "OPERATION2_OR" for hierarchy "OPERATION2_OR:I3" File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 229
+Info (12128): Elaborating entity "OPERATION3_ADDER" for hierarchy "OPERATION3_ADDER:I4" File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 230
+Info (12128): Elaborating entity "OPERATION4_XOR" for hierarchy "OPERATION4_XOR:I5" File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 231
+Info (12128): Elaborating entity "MULT2" for hierarchy "MULT2:I6" File: C:/Users/shina/Desktop/Project 2/Project2.vhd Line: 232
+Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 6 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4761 megabytes
+    Info: Processing ended: Sun Jun 05 19:55:03 2022
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:28
+
+
