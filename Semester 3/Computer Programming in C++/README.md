@@ -44,4 +44,4 @@ It's also provided the option to search a spesific movie, by typing the title, t
 ---
 
 ## Contributors
-- **Developer:** Maria Schoinaki
+- **Developer:** [Maria Schoinaki](https://github.com/MariaSchoinaki)
