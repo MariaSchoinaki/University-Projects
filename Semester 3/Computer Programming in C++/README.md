@@ -8,29 +8,40 @@ It's also provided the option to search a spesific movie, by typing the title, t
 ![Film Browser Main Page](images/image1.png)
 
 ## Features
+- **User-friendly Navigation:**
+  - Next-previous buttons allow seamless browsing through a large movie collection.
 
-- Users can navigate through a various range of movies with the help of next-previous buttons.
+- **Detailed Movie Information:**
+  - Title, release year, genre, director, actors, description, and images for each movie.
 
-- A variety of different information is provided, such as the title, release year, genre, director, actors, a brief description and a couple of images for each movie.
+- **Advanced Search and Filtering:**
+  - **Genre Filter:** Search for movies based on preferred genres.
+  - **Year Range Filter:** Find movies released within a specific time frame.
+  - **Text Search:** Locate movies using **titles, director names, or actor names**.
 
-- Easily find movie subsets based on different criteria.
-  - Genre Filter: Users can discover movies based on their preferred genre.
-  - Max-Min Year Filter: Users can find movies released in a specific year or within a range of years.
-  - Text Search: Users can type titles, directors or actors to search for a specific movie or movies with a specific actor.
-
+---
 
 ## How to Run
+### 1. Download and Set Up
+- **Clone the repository** to your local system.
+- Ensure all dependencies, including the **SGG library**, are installed.
 
-1. **Download the Application:**
+### 2. Locate the 'bin' Folder
+- Navigate to the project directory.
+- Find the **'bin'** folder, which contains the compiled executable.
 
-   - Clone the project.
+### 3. Run the Film Browser
+- Locate the **AUEBFLIX** executable file.
+- **Double-click** on `AUEBFLIX.exe` to launch the application.
 
-2. **Find the 'bin' Folder:**
+---
 
-   - Open the folder with the application files.
-   - Inside this folder, find the subfolder named 'bin'.
+## System Requirements
+- **Operating System:** Windows/Linux
+- **Compiler:** g++ with C++11 or later
+- **Graphics Library:** Simple Game Graphics (SGG)
 
-3. **Run the Film Browser:**
+---
 
-   - Locate the `AUEBFLIX` executable file.
-   - Double-click on the `AUEBFLIX` executable.
+## Contributors
+- **Developer:** Maria Schoinaki

@@ -99,3 +99,4 @@ Stats: lookups 10000, hits 1030, hit-ratio 0.103000
 
 ## Contributors
 - **Developer:** [Maria Schoinaki](https://github.com/MariaSchoinaki)
+- **Developer:** [Christos Stamoulos](https://github.com/ChristosStamoulos)
