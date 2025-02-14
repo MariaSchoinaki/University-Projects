@@ -4,14 +4,12 @@
  * Keys must be unique
  * */
 public interface Cache<K, V> {
-
 	/**
 	 * Look for data associated with key. 
 	 * @param key the key to look for
 	 * @return The associated data or null if it is not found
 	 */
 	public V lookUp(K key);
-	
 	/**
 	 * Stores data with associated with the given key. If required, it evicts a
 	 * data record to make room for the new one
@@ -40,5 +38,4 @@ public interface Cache<K, V> {
 	 * Returns the total number of lookups performed by this cache 
 	 */
 	public long getNumberOfLookUps();
-	
 }

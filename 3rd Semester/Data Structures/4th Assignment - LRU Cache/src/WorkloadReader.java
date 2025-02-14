@@ -51,5 +51,4 @@ public class WorkloadReader {
 	protected void finalize() throws Throwable {
 		close();
 	}
-
 }
