@@ -1,0 +1,1 @@
+The 1st project for the "Artificial Intelligence" course is available [here](https://github.com/MariaSchoinaki/Othello-Reversi-AI).

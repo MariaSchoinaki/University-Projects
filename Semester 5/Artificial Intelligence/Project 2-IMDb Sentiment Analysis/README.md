@@ -1,0 +1,1 @@
+The 2nd project for the "Artificial Intelligence" course is available [here](https://github.com/MariaSchoinaki/IMDb-Sentiment-Analysis-ML).
