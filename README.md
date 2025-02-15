@@ -14,7 +14,7 @@ Assignments and projects completed as part of my university courses at AUEB (Bac
 |||||
 | 3222   |  Computer Programming in JAVA                       | 2     | 6   |
 | 3262   |  Digital System Design                              | 2     | 6   |
-| 3254   |  Introduction to Management                         | 2     | 6   |
+| 3254   |  Introduction to Business Administration            | 2     | 6   |
 | 3214   |  Mathematics II (Linear Algebra)                    | 2     | 6   |
 | 3311   |  Probability                                        | 2     | 6   |
 |||||
