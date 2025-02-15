@@ -1,5 +1,5 @@
-# university-projects
-Assignments and projects completed as part of my university courses at AUEB (Bachelor's in Computer Science & Informatics, School of Information Sciences and Technology (2021-2025) <br><br>
+# University Projects
+Assignments and projects completed as part of my university courses at AUEB (Bachelor's in Computer Science & Informatics, School of Information Sciences and Technology (2021-2025). <br><br>
 
 
 ### Below is a list of all the university courses featured:
