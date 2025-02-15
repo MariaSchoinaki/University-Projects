@@ -1,0 +1,1 @@
+The main project for the "Distributed Systems" course is available [here](https://github.com/MariaSchoinaki/roomie).
