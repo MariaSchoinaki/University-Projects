@@ -1,0 +1,550 @@
+Package minipython;
+
+Helpers // Βοηθητικά στοιχεία για τα παρακάτω
+
+    all = [0 .. 127];
+
+    sp = 32; // Space 
+    ff = 12; // Form Feed 
+    cr = 13; // Carriage Return 
+    lf = 10; // Line Feed 
+
+    eol = lf | cr | cr lf ;
+    not_eol = [all - [cr + lf]];
+
+
+    // Letter and Digit definition 
+    letter = ['a'..'z']|['A'..'Z'];
+    non_digit = letter|'_';
+    digit = ['0'..'9'];
+
+
+    // Integer and Decimal definition 
+    integer = digit+;
+    literal = integer '.' integer;
+
+
+    // Sting Literal
+	string_literal_double = [not_eol - 34]; // 34 = "
+	string_literal_single = [not_eol - 39]; // 39 = ' 
+
+
+
+// Δήλωση των καταστάσεων, στις οποίες μπορεί να βρίσκεται το αυτόματο της λεκτικής ανάλυσης
+States 
+   normal, 
+   sq_string, 
+   dq_string, 
+   comment;
+
+
+// Τα κουπόνια (λεκτικης μονάδες) της λεκτικής ανάλυσης
+Tokens 
+
+    // Tab
+        {normal} tab = 9; 
+
+    // Whitespace definition 
+        {normal} whitespace = sp|cr|ff|lf;
+
+    // logic
+        {normal} and = 'and';
+        {normal} or = 'or';
+        {normal} not = 'not';
+
+    // symbols
+        {normal} colon = ':';
+        {normal} coma = ',';
+        {normal} dot = '.';
+        {normal} assign = '=';
+        {normal} left_parenthesis = '(';
+        {normal} right_parenthesis = ')';
+        {normal} left_bracket = '[';
+        {normal} right_bracket = ']';
+
+    // comparison
+        {normal} greater_than = '>';
+        {normal} less_equal = '<=';
+        {normal} greater_equal = '>=';
+        {normal} equal = '==';
+        {normal} not_equal = '!=';
+        {normal} less_than = '<';
+
+    // arithmetic
+        {normal} plus = '+';
+        {normal} minus = '-';
+        {normal} times = '*';
+        {normal} divide = '/';
+        {normal} modulo = '%';
+        {normal} power = '**';
+
+    // assignments
+        {normal} minus_equal = '-=';
+        {normal} divide_equal = '/=';
+        {normal} plus_equal = '+=';
+        {normal} mult_equal = '*=';
+
+    // boolean
+        {normal} true = 'true';
+        {normal} false = 'false';
+        {normal} none = 'None';
+
+    // key-symbols
+        {normal} if = 'if';
+        {normal} else = 'else';
+        {normal} while = 'while';
+        {normal} for = 'for';
+        {normal} def = 'def';
+        {normal} return = 'return';
+        {normal} print = 'print';
+        {normal} in = 'in';
+        {normal} assert = 'assert';
+        {normal} len = 'len';
+        {normal} ascii = 'ascii';
+        {normal} max = 'max';
+        {normal} min = 'min';
+        {normal} tk_import = 'import';
+        {normal} as = 'as';
+        {normal} from = 'from';
+
+
+
+    // identifier definition 
+        {normal} id = non_digit (digit | non_digit)*;
+    
+    // Number definition
+        {normal} num = integer;
+        {normal} double = literal;
+
+
+    // Comment
+        {normal->comment} comment_start = '#';
+        {comment} comment_text = not_eol*;
+        {comment->normal} end_comment = eol;
+    
+    // Strings
+        {normal->dq_string, dq_string->normal} double_quote = '"';
+        {normal->sq_string, sq_string->normal} single_quote = ''';
+        {dq_string} string_literal_d =  string_literal_double*;
+        {sq_string} string_literal_s = string_literal_single*;
+
+
+Ignored Tokens
+
+    comment_start,
+    comment_text,
+    end_comment,
+    whitespace;
+
+
+/* Concrete Syntax Tree */
+Productions
+
+    // Goal
+        goal = function_or_statement* 
+                {-> New goal( [function_or_statement] )};
+
+        function_or_statement = {func}function 
+                                {-> New function_or_statement.func(function)}
+                        |   {stat} statement 
+                                {-> New function_or_statement.stat(statement)};
+
+
+    // Function
+
+        function = def identifier left_parenthesis argument? right_parenthesis colon statement
+                    {-> New function( identifier, [argument], statement )};
+
+
+    // Arguments
+
+        /********** ARGUMENTS **********/
+        /*                             */
+        /* Two additional level in     */
+        /* order to handle extra       */
+        /* arguments with coma.        */
+        /*                             */
+        /*******************************/
+
+        argument = identifier argument_assign? argument_additional_assign*
+                    {-> New argument( identifier, [argument_assign], [argument_additional_assign] )};
+
+        argument_assign = assign value 
+                    {-> New argument_assign( value )};
+
+        argument_additional_assign = coma identifier argument_assign?
+                    {-> New argument_additional_assign ( identifier, [argument_assign] )};
+
+
+    // Statements
+
+        /********** STATEMENTS **********/
+        /*                              */
+        /* All statements mentioned in  */
+        /* the BNF are included here.   */
+        /*                              */
+        /* The assignments are given    */
+        /* as options in assign_opt.    */
+        /*                              */
+        /********************************/
+
+        statement = {if} tab* if comparison colon statement
+                        {-> New statement.if( comparison, statement )}
+                |   {while} tab* while comparison colon statement
+                        {-> New statement.while( comparison, statement )}
+                |   {for} tab* for [i1]:identifier in [i2]:identifier colon statement
+                        {-> New statement.for( i1, i2, statement )}
+                |   {return} tab* return expression
+                        {-> New statement.return( expression )}
+                |   {print} tab* print expression additional_expression*
+                        {-> New statement.print(print, expression, [additional_expression] )}
+                |   {assign_eq} tab* identifier assign expression 
+                        {-> New statement.assign_eq( identifier, expression )}
+                |   {assign_plus} tab* identifier plus_equal expression 
+                        {-> New statement.assign_plus( identifier, expression )}
+                |   {assign_minus} tab* identifier minus_equal expression 
+                        {-> New statement.assign_minus( identifier, expression )}
+                |   {assign_div} tab* identifier divide_equal expression 
+                        {-> New statement.assign_div( identifier, expression )}
+                |   {assign_mult} tab* identifier mult_equal expression 
+                        {-> New statement.assign_mult( identifier, expression )}
+                |   {array} tab* identifier left_bracket [e1]:expression right_bracket assign [e2]:expression
+                        {-> New statement.array( identifier, e1, e2 )}
+                |   {assert} tab* assert expression additional_expression?
+                        {-> New statement.assert( expression, [additional_expression] )}
+                |   {assert_comparison} assert comparison additional_expression? // den uparxei sto bnf
+                        {-> New statement.assert_comparison( comparison, [additional_expression] )}
+                |   {f_call} tab* function_call
+                        {-> New statement.f_call( function_call )}
+                |   {import} tab* import
+                        {-> New statement.import( import )};
+    
+
+    // Expressions
+
+        /********** EXPRESSIONS **********/
+        /*                               */
+        /* Our expressions have 4 levels */
+        /* Level 1 -> expression         */
+        /* Level 2 -> factor             */
+        /* Level 3 -> exponent           */
+        /* Level 4 -> primary_expression */
+        /*                               */
+        /* expression_operators are used */
+        /* last so that they can also be */
+        /* part of any operations.       */
+        /*                               */
+        /*********************************/
+
+        expression = {factor} factor
+                        {-> factor.expression}
+                |   {addition} expression plus factor
+                        {-> New expression.addition( expression, factor.expression )}
+                |   {subtraction} expression minus factor
+                        {-> New expression.subtraction( expression, factor.expression )};
+
+        factor{-> expression} = {exponent} exponent
+                    {-> exponent.expression}
+                |{mult} factor times exponent 
+                    {-> New expression.mult( factor.expression, exponent.expression )}
+                |{div}  factor divide exponent
+                    {-> New expression.div( factor.expression, exponent.expression )}
+                |{mod}  factor modulo exponent
+                    {-> New expression.mod( factor.expression, exponent.expression )};
+
+
+        exponent{-> expression} =  {expression_operators} expression_operators
+                        {-> expression_operators.expression}
+                |   {exponent} exponent power expression_operators
+                        {-> New expression.exponent( exponent.expression, expression_operators.expression )};
+
+
+        primary_expression{-> expression} = {value} value
+                                {-> New expression.value( value )}
+                        |   {identifier} identifier
+                                {-> New expression.identifier( identifier )}
+                        |   {f_call} function_call
+                                {-> New expression.f_call( function_call )}
+                        |   {array_index} identifier left_bracket expression_operators right_bracket
+                                {-> New expression.array_index( identifier, expression_operators.expression )}
+                        |   {parenth} left_parenthesis expression right_parenthesis
+                                {-> New expression.parenth( expression )};
+
+
+        expression_operators{-> expression} = {primary_expression} primary_expression
+                        {-> primary_expression.expression}
+                |   {length} len left_parenthesis expression right_parenthesis
+                        {-> New expression.length( expression )}
+                |   {ascii} ascii left_parenthesis identifier right_parenthesis
+                        {-> New expression.ascii( identifier )}
+                |   {max} max left_parenthesis value additional_value* right_parenthesis
+                        {-> New expression.max( value, [additional_value] )}
+                |   {min} min left_parenthesis value additional_value* right_parenthesis
+                        {-> New expression.min( value, [additional_value] )}
+                |   {array} left_bracket value additional_value* right_bracket
+                        {-> New expression.array( value, [additional_value] )}; 
+
+
+
+    // Imports
+
+        /************ IMPORTS ************/
+        /*                               */
+        /* Three additional level in     */
+        /* order to handle additional    */
+        /* modules and identifiers       */
+        /*                               */
+        /*********************************/
+
+        import =  {import} tk_import module import_as_identifier? import_additional_module*
+                    {-> New import.import( [import_as_identifier], [import_additional_module] )}
+                | {from} from module tk_import identifier import_as_identifier? import_additional_from*
+                    {-> New import.from( module, [import_as_identifier], [import_additional_from] )};
+
+        import_as_identifier = as identifier
+                {-> New import_as_identifier( identifier )};
+        import_additional_module = coma module import_as_identifier?
+                {-> New import_additional_module( module, [import_as_identifier] )};
+        import_additional_from = coma identifier import_as_identifier?
+                {-> New import_additional_from( identifier, [import_as_identifier] )};
+
+
+    // Modules
+
+        module = module_dot_identifier* identifier
+                {-> New module( [module_dot_identifier], identifier )};
+
+        module_dot_identifier = identifier dot
+                {-> New module_dot_identifier( identifier )};
+
+
+    // Comparisons
+
+        /********** COMPARISONS **********/
+        /*                               */
+        /* Our comparisons have 4 levels */
+        /* Level 1 -> comparison (or)    */
+        /* Level 2 -> comparison2 (and)  */
+        /* Level 3 -> comparison3 (not)  */
+        /* Level 4 -> primary_expression */
+        /*                               */
+        /* We have added {par} in        */
+        /* comparison in order to handle */
+        /* if statement with parenthesis */
+        /*                               */
+        /* comparison_opt are used       */
+        /* last and include  all 6       */
+        /* mentioned in the BNF          */
+        /*                               */
+        /*********************************/
+
+// Comparisons
+        comparison = comparison2
+                        {-> comparison2.comparison}
+                    | {or} comparison or comparison2
+                        {-> New comparison.or( comparison, comparison2.comparison )};
+
+        comparison2 {-> comparison} = comparison3
+                        {-> comparison3.comparison}
+                    | {and} comparison2 and comparison3
+                        {-> New comparison.and( comparison2.comparison, comparison3.comparison )};
+
+        comparison3 {-> comparison} = {primary_comparison} primary_comparison
+                        {-> primary_comparison.comparison}
+                    | {not} not comparison3
+                        {-> New comparison.not( comparison3.comparison )};
+
+        primary_comparison {-> comparison} = 
+                    {greater} [ex1]:expression greater_than [op2]:expression
+                        {-> New comparison.greater( ex1, op2)}
+                    | {less} [ex1]:expression less_than [op2]:expression
+                        {-> New comparison.less( ex1, op2)}
+                    | {greater_equal} [ex1]:expression greater_equal [op2]:expression
+                        {-> New comparison.greater_equal( ex1, op2)}
+                    | {less_equal} [ex1]:expression less_equal [op2]:expression
+                        {-> New comparison.less_equal( ex1, op2)}
+                    | {equal} [ex1]:expression equal [op2]:expression
+                        {-> New comparison.equal( ex1, op2)}
+                    | {not_equal} [ex1]:expression not_equal [op2]:expression
+                        {-> New comparison.not_equal( ex1, op2)}
+                    | {true} true
+                        {-> New comparison.true()}
+                    | {false} false
+                        {-> New comparison.false()}
+                    | {par} left_parenthesis comparison right_parenthesis // den uparxei sto bnf
+                        {-> New comparison.parenthesis( comparison )};
+
+
+    // Function Calls
+
+        function_call = identifier left_parenthesis arglist? right_parenthesis
+            {-> New function_call( identifier, [arglist] )};
+
+
+    // Arglists
+
+        arglist = expression additional_expression*
+            {-> New arglist( expression, [additional_expression] )};
+
+
+    // Values            
+
+        value = {number} number
+                    {-> New value.number( number )}
+            |   {dq_string} [dq1]:double_quote string_literal_d [dq2]:double_quote
+                    {-> New value.dq_string( string_literal_d )}
+            |   {sq_string} [sq1]:single_quote string_literal_s [sq2]:single_quote
+                    {-> New value.sq_string( string_literal_s )}
+            |   {func} identifier dot function_call
+                    {-> New value.func( identifier, function_call )}
+            |   {none} none
+                    {-> New value.none(none)};
+
+
+    // Number
+
+        number = {integer} num
+            {-> New number.integer(num)}
+        | {double} double 
+            {-> New number.double(double)};
+
+
+    // Identifier
+    
+        identifier = id
+            {-> New identifier( id )};
+
+
+    // Helpers
+    
+        additional_expression = coma expression
+            {-> New additional_expression( expression )};
+        additional_value = coma value
+            {-> New additional_value( value )};
+    
+
+
+/* Abstract Syntax Tree */
+Abstract Syntax Tree
+
+    // Goal
+        goal = function_or_statement*;
+
+        function_or_statement = {func}function 
+                        |   {stat} statement;
+
+    // Function
+
+        function = identifier argument* statement;  // changed ? to *
+
+    // Arguments
+
+        argument = identifier argument_assign* argument_additional_assign*; // changed 1st ? to *
+
+        argument_assign = value;
+        argument_additional_assign = identifier argument_assign*;   // changed ? to *
+
+    // Statements
+
+        statement = {if} comparison statement
+                |   {while} comparison statement
+                |   {for} [i1]:identifier [i2]:identifier statement
+                |   {return} expression
+                |   {print} print expression additional_expression*
+                |   {assign_eq} identifier expression  
+                |   {assign_plus} identifier expression 
+                |   {assign_minus} identifier expression 
+                |   {assign_div} identifier expression 
+                |   {assign_mult} identifier expression 
+                |   {array} identifier [e1]:expression [e2]:expression
+                |   {assert} expression additional_expression*
+                |   {assert_comparison} comparison additional_expression* // den uparxei sto bnf
+                |   {f_call} function_call
+                |   {import} import;
+        
+
+    // Expressions
+
+        expression =  {addition} [e1]:expression [e2]:expression
+                    | {subtraction} [e1]:expression [e2]:expression
+                    | {mult} [e1]:expression [e2]:expression
+                    | {div} [e1]:expression [e2]:expression
+                    | {mod} [e1]:expression [e2]:expression
+                    | {exponent} [e1]:expression [e2]:expression
+                    | {value} value
+                    | {identifier} identifier
+                    | {f_call} function_call
+                    | {array_index} identifier expression
+                    | {parenth} expression
+                    | {length} expression
+                    | {ascii} identifier
+                    | {max} value additional_value*
+                    | {min} value additional_value*
+                    | {array} value additional_value*;
+
+    // Imports
+
+        import = {import} import_as_identifier* import_additional_module*
+                | {from} module import_as_identifier* import_additional_from*;
+
+        import_as_identifier = identifier;
+        import_additional_module = module import_as_identifier*;
+        import_additional_from = identifier import_as_identifier*;
+
+
+    // Modules
+
+        module = module_dot_identifier* identifier;
+
+        module_dot_identifier = identifier;
+
+
+    // Comparisons
+
+        comparison = {or} [l]:comparison [r]:comparison
+                    | {and} [l]:comparison [r]:comparison
+                    | {not} comparison
+                    | {greater} [ex1]:expression [ex2]:expression
+                    | {less} [ex1]:expression [ex2]:expression
+                    | {greater_equal} [ex1]:expression [ex2]:expression
+                    | {less_equal} [ex1]:expression [ex2]:expression
+                    | {equal} [ex1]:expression [ex2]:expression
+                    | {not_equal} [ex1]:expression [ex2]:expression
+                    | {true}
+                    | {false}
+                    | {parenthesis} comparison; // den uparxei sto bnf
+
+
+    // Function Calls
+
+        function_call = identifier arglist*;
+
+
+    // Arglists
+
+        arglist = expression additional_expression*;
+
+
+    // Values            
+
+        value =  {number} number
+            |   {dq_string} string_literal_d
+            |   {sq_string} string_literal_s
+            |   {func} identifier function_call
+            |   {none} none;
+
+
+    // Number
+
+        number =  {integer} num |  {double} double;
+
+
+    // Identifier
+    
+        identifier = id;
+
+
+    // Helpers
+    
+        additional_expression = expression;
+        additional_value = value;
