@@ -47,5 +47,11 @@ Assignments and projects completed as part of my university courses at AUEB (Bac
 | 3882   |  Multimedia Technology                              | 7     | 6   |
 | 3747   |  Technologies and Programmming of Web Applications  | 7     | 6   |
 |||||
-
-
+| 3743   |  Applied Data Science                               | 8     | 6   |
+| 8170   |  Big Data Management Systems                        | 8     | 6   |
+| 3791   |  Elements of Information Law                        | 8     | 6   |
+| 3783   |  Human Computer Interaction                         | 8     | 6   |
+| 3644   |  Information Retrieval Systems                      | 8     | 6   |
+| 3842   |  Information Systems Applications Development       | 8     | 6   |
+| 3612   |  Special Topics in Discrete Mathematics             | 8     | 6   |
+| 3584   |  Technological Innovation and Entrepreneurship      | 8     | 6   |
