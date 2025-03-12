@@ -54,4 +54,5 @@ Assignments and projects completed as part of my university courses at AUEB (Bac
 | 3644   |  Information Retrieval Systems                      | 8     | 6   |
 | 3842   |  Information Systems Applications Development       | 8     | 6   |
 | 3612   |  Special Topics in Discrete Mathematics             | 8     | 6   |
+| 3612   |  Special Topics in Parallel Computing               | 8     | 6   |
 | 3584   |  Technological Innovation and Entrepreneurship      | 8     | 6   |
