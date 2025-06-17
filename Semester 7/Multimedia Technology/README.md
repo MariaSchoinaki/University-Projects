@@ -1,1 +1,0 @@
-The project for the "Multimedia Technology" course is available [here](https://github.com/MariaSchoinaki/Horror-Escape-Room).
