@@ -1,0 +1,1 @@
+The main project for the "Information Systems Applications Development" course is available [here](https://github.com/MariaSchoinaki/ACCESS).
