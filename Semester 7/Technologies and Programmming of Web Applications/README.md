@@ -1,0 +1,1 @@
+The main project for the "Technologies and Programmming of Web Applications" course is available [here](https://github.com/MariaSchoinaki/RentHub).
