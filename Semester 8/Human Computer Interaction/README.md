@@ -1,0 +1,1 @@
+The main project for the "Human Computer Interaction" course is available [here](https://github.com/MariaSchoinaki/Thea).
