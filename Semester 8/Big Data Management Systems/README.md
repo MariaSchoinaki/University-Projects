@@ -1,0 +1,1 @@
+The main project for the "Big Data Management Systems" course is available [here](https://github.com/MariaSchoinaki/Big-Data-Management-Systems).
