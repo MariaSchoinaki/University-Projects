@@ -1,0 +1,1 @@
+The main project for the "Information Retrieval Systems" course is available [here](https://github.com/MariaSchoinaki/Information-Retrieval-Systems).
