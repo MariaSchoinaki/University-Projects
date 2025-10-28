@@ -1,8 +1,16 @@
 # University Projects
-Assignments and projects completed as part of my university courses at AUEB (Bachelor's in Computer Science & Informatics, School of Information Sciences and Technology (2021-2025). <br><br>
+Assignments and projects completed as part of my university courses at AUEB (Bachelor's and Master's in Computer Science & Informatics, School of Information Sciences and Technology (2021-2027). <br><br>
 
+### Below is a list of all the MSc courses featured:
 
-### Below is a list of all the university courses featured:
+| Code    | Course title                                        |SEMESTER|ECTS|               
+|---------|-----------------------------------------------------|-------|-----|
+| m32102f |  Algorithms: Design and Analysis                    | 1     | 6   |
+| m32104f |  Distributed Systems, Big Data, and Cloud Computing | 1     | 6   |
+| m32212f |  Natural Language Processing (NLP)                  | 1     | 6   |
+| m32204f |  Reinforcement learning (RL)                        | 1     | 6   |
+
+### Below is a list of all the BSc courses featured:
 
 | Code   | Course title                                        |SEMESTER|ECTS|               
 |--------|-----------------------------------------------------|-------|-----|
