@@ -11,10 +11,8 @@ Cliff Walking is an **episodic gridworld MDP**:
 
 - A **12×4** grid (width = 12, height = 4)
 - Start state at **(0,0)** and terminal goal at **(11,0)**
-- The bottom row contains **cliff states** at:
-  $$
-  \{(x,0)\ |\ x=1,\dots,10\}
-  $$
+- The bottom row contains cliff states at positions (x, 0) for x = 1 to 10
+
 - The agent must reach the goal while avoiding the cliff
 
 ---
@@ -22,15 +20,8 @@ Cliff Walking is an **episodic gridworld MDP**:
 ## State and Action Representation
 
 ### States
-Each state is a grid coordinate:
-$$
-S = (x,y)
-$$
-with:
-$$
-x \in \{0, \dots, 11\}, \qquad
-y \in \{0, \dots, 3\}
-$$
+Each state is a grid coordinate S = (x, y), with x in {0, ..., 11} and y in {0, ..., 3}.
+
 
 
 ### Actions
@@ -71,10 +62,14 @@ Q(s,a) \leftarrow Q(s,a) + \alpha \big[r + \gamma \max_{a'} Q(s',a') - Q(s,a)\bi
 $$
 
 ### Expected SARSA
-$$
-Q(s,a) \leftarrow Q(s,a) + \alpha \Big[r + \gamma \sum_{a'} \pi(a'|s')Q(s',a') - Q(s,a)\Big]
-$$
-where π is the ε-greedy policy derived from \(Q\).
+
+Expected SARSA updates the action-value function using the expected value
+under the ε-greedy policy:
+
+Q(s, a) ← Q(s, a) + α [ r + γ · Eπ[ Q(s′, a′) ] − Q(s, a) ]
+
+where π denotes the ε-greedy policy derived from Q.
+
 
 ---
 
@@ -90,21 +85,14 @@ At each step:
 
 ## Interim Performance Experiment
 
-To reproduce the **interim performance curves**:
+To reproduce the interim performance curves:
 
-- The learning rate **α** is swept over **19 values**:
-  $$
-  \alpha \in [0.1, 1.0]
-  $$
-- For each α:
-  - **2000 independent runs** are executed (different random seeds)
-  - each run consists of **100 episodes**
-- The interim score of a run is:
-  $$
-  \frac{1}{100}\sum_{ep=1}^{100} G_{ep}
-  $$
-  where G_ep is the return of episode *ep*
-- Final curves show the **average interim return** across runs for each algorithm
+- The learning rate alpha is swept over 19 values, from 0.1 to 1.0
+- For each value of alpha:
+  - 2000 independent runs are executed (using different random seeds)
+  - each run consists of 100 episodes
+- The interim score of a run is computed as the average return over the first 100 episodes
+- Final curves show the average interim return across runs for each algorithm
 
 > Note: The original figure often uses many more runs (e.g., 50,000) for smoother curves.  
 > This implementation uses **2000 runs** for computational practicality.
