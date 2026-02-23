@@ -1,0 +1,22 @@
+{
+  "version": "2.0",
+  "functionTimeout": "10:00:00",
+  "extensions": {
+    "blobs": {
+      "maxDegreeOfParallelism": 1
+    }
+  },
+
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      }
+    }
+  },
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[4.*, 5.0.0)"
+  }
+}

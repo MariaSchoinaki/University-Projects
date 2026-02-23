@@ -1,0 +1,35 @@
+services:
+  pushgateway:
+    image: prom/pushgateway
+    ports:
+      - "9091:9091"
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+    depends_on:
+      - pushgateway
+
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+
+  splitter_worker:
+    build: ./video_preprocessing/splitter_worker
+    container_name: splitter_worker
+    restart: unless-stopped
+    environment:
+      - AZURE_STORAGE_CONNECTION_STRING=put_your_key_here
+      - SPLIT_QUEUE_NAME=split-requests
+      - PROCESSING_QUEUE_NAME=processing-queue
+      - INPUT_CONTAINER=storagecontainer
+      - OUTPUT_CONTAINER=outputcontainer
+      - SEGMENT_SECONDS=120
