@@ -8,7 +8,15 @@ Assignments and projects completed as part of my university courses at AUEB (Bac
 | m32102f |  Algorithms: Design and Analysis                    | 1     | 6   |
 | m32104f |  Distributed Systems, Big Data, and Cloud Computing | 1     | 6   |
 | m32212f |  Natural Language Processing (NLP)                  | 1     | 6   |
-| m32204f |  Reinforcement learning (RL)                        | 1     | 6   |
+| m32204f |  Reinforcement Learning (RL)                        | 1     | 6   |
+| m32216f |  Research in Computer Science I                     | 1     | 6   |
+| m32101f |  Research Methodology                               | 1     | 6   |
+|||||
+| m32207f |  Algorithmic Game Theory                            | 2     | 6   |
+| m32214f |  Cryptography and Applications                      | 2     | 6   |
+| m32106f |  Deep Learning (DL)                                 | 2     | 6   |
+| m32217f |  Research in Computer Science II                    | 2     | 6   |
+| m32219f |  Special Topics in Artificial Intelligence (AI)     | 2     | 6   |
 
 ### Below is a list of all the BSc courses featured:
 
